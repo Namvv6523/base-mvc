@@ -24,16 +24,14 @@ $router->get('detail-product/{id}',[App\Controllers\ProductController::class, 'd
 $router->get('taikhoan/list-taikhoan', [App\Controllers\TaiKhoanController::class, 'index']);
 $router->get('taikhoan/store', [App\Controllers\TaiKhoanController::class, 'store']);
 $router->post('taikhoan/create', [App\Controllers\TaiKhoanController::class, 'create']);
-
 $router->get('taikhoan/update/{id}', [App\Controllers\TaiKhoanController::class, 'update']);
 $router->post('taikhoan/saveUpdate', [App\Controllers\TaiKhoanController::class, 'saveUpdate']);
-
-$router->get('taikhoan/remove/{id}', [App\Controllers\TaiKhoanController::class, 'delete']);
+$router->get('taikhoan/remove/{id}', [App\Models\TaiKhoan::class, 'delete']);
 
 // Student
 $router->get('list-student', [App\Controllers\StudentController::class, 'index']);
-
-
+$router->get('student/store', [App\Controllers\StudentController::class, 'store']);
+$router->post('student/create', [App\Controllers\StudentController::class, 'create']);
 
 
 

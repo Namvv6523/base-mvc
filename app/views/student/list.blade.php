@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container">
-    <a href="" class="btn btn-success mb-3">Add</a>
+    <a href="{{BASE_URL}}student/store" class="btn btn-success mb-3">Add</a>
     <table class="table">
         <thead>
             <th>ID</th>

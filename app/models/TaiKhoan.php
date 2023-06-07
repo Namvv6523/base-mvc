@@ -30,7 +30,8 @@ class TaiKhoan extends BaseModel
 
     public function remove($id)
     {
-        $sql = "DELETE FROM $this->table WHERE id = $id";
-        $this->getData($sql, false);
+        $sql = "DELETE FROM $this->table WHERE id = ?";
+        $this->setQuery($sql);
+        return $this->execute([$id]);
     }
 }

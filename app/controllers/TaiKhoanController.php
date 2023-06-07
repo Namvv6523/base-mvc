@@ -53,14 +53,4 @@ class TaiKhoanController extends BaseController
         return $this->render('taikhoan.update', compact('updateTk'));
     }
 
-
-
-    public function delete($id)
-    {
-        $deleteTk = isset($_GET['id']) ? ($_GET['id']): null;
-        if(!$deleteTk){
-            header('location: taikhoan/list-taikhoan');
-            die;
-        }
-    }
 }
