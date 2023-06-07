@@ -15,7 +15,7 @@
         <div class="header-main">
             <ul class="menu">
                 <li><a href="{{BASE_URL}}list-product">Quản lý product</a></li>
-                <li><a href="{{BASE_URL}}list-taikhoan">Quản lý tài khoản</a></li>
+                <li><a href="{{BASE_URL}}taikhoan/list-taikhoan">Quản lý tài khoản</a></li>
                 <li><a href="{{BASE_URL}}list-student">Quản lý students</a></li>
                 <li><a href="">Quản lý teachers</a></li>
                 <li><a href="">Quản lý ô tô</a></li>

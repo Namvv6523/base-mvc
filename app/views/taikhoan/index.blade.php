@@ -17,8 +17,8 @@
             <td>{{$item->ten}}</td>
             <td>{{$item->matkhau}}</td>
             <td>
-                <a href="" class="btn btn-primary">Edit</a>
-                <a href="{{ BASE_URL }}delete" class="btn btn-danger">Delete</a>
+                <a href="{{ BASE_URL }}taikhoan/update/{{ $item->id }}" class="btn btn-primary">Edit</a>
+                <a href="{{ BASE_URL }}taikhoan/delete/{{ $item->id }}" class="btn btn-danger">Delete</a>
             </td>
         </tbody>
         @endforeach

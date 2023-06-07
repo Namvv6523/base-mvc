@@ -21,7 +21,15 @@ class TaiKhoan extends BaseModel
         return $this->execute([$ten, $matkhau]);
     }
 
-    public function remove($id){
+    public function update($id)
+    {
+        $sql = "UPDATE $this->table SET ten = name, matkhau = pass WHERE id = $id";
+        $this->setQuery($sql);
+        return $this->execute($id);
+    }
+
+    public function remove($id)
+    {
         $sql = "DELETE FROM $this->table WHERE id = $id";
         $this->getData($sql, false);
     }

@@ -37,9 +37,30 @@ class TaiKhoanController extends BaseController
         }
     }
 
+    public function update()
+    {
+        return $this->render('taikhoan.update');
+    }
+
+    public function saveUpdate($id)
+    {
+        if (isset($_POST['submit'])) {
+            $ten_new = $_POST['name'];
+            $matkhau_new = $_POST['pass'];
+            $updateTk = $this->taikhoan->update($ten_new, $matkhau_new);
+            header('location:list-taikhoan');
+        }
+        return $this->render('taikhoan.update', compact('updateTk'));
+    }
+
+
+
     public function delete($id)
     {
-        $taikhoan = $this->taikhoan->remove($id);
-        return $this->render('taikhoan.index', compact('taikhoan'));
+        $deleteTk = isset($_GET['id']) ? ($_GET['id']): null;
+        if(!$deleteTk){
+            header('location: taikhoan/list-taikhoan');
+            die;
+        }
     }
 }
