@@ -8,7 +8,7 @@ const DBCHARSET = "utf8";
 const DBHOST = "127.0.0.1";
 const BASE_URL = "http://localhost/php2/learn-php/base-mvc/";
 
-function redirect($key, $msg, $router)
+function redirect($key, $msg, $route)
 {
     $_SESSION['$key'] = $msg;
 
@@ -22,5 +22,11 @@ function redirect($key, $msg, $router)
             break;
     }
 
-    header('location:' .BASE_URL.$router. '?msg=' .$key);die;
+    header('location:' . BASE_URL . $route . '?msg=' . $key);
+    die;
+}
+
+function route($url)
+{
+    return BASE_URL . $url;
 }

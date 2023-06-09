@@ -30,16 +30,19 @@ $router->get('taikhoan/remove/{id}', [App\Models\TaiKhoan::class, 'delete']);
 
 // Student
 $router->get('list-student', [App\Controllers\StudentController::class, 'index']);
+
+// add student
 $router->get('student/store', [App\Controllers\StudentController::class, 'store']);
 $router->post('student/create', [App\Controllers\StudentController::class, 'create']);
 
+// update student
+$router->get('student/detail/{id}', [App\Controllers\StudentController::class, 'detail']);
+$router->post('student/edit-student/{id}', [App\Controllers\StudentController::class, 'editStudent']);
 
 
 
 // bắt đầu định nghĩa ra các đường dẫn
-$router->get('/', function(){
-    return "trang chủ";
-});
+$router->get('/', function(){ return "trang chủ";});
 
 $router->get('test', [App\Controllers\ProductController::class, 'index']);
 
