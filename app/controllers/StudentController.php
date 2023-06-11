@@ -98,8 +98,12 @@ class StudentController extends BaseController
                     die;
                 }
             }
-
-
         }
+    }
+
+    // xây dựng hàm xóa
+    public function delete($id){
+        $this->student->deleteStudent($id);
+        header('location: '.BASE_URL. 'list-student');
     }
 }

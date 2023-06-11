@@ -20,7 +20,7 @@
             <td>{{$std->age}}</td>
             <td>
                 <a href="{{BASE_URL}}student/detail/{{$std->id}}" class="btn btn-primary">Edit</a>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a href="{{BASE_URL}}student/delete/{{$std->id}}" class="btn btn-danger">Delete</a>
             </td>
         </tbody>
 

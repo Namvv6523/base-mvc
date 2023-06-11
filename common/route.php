@@ -28,7 +28,8 @@ $router->get('taikhoan/update/{id}', [App\Controllers\TaiKhoanController::class,
 $router->post('taikhoan/saveUpdate', [App\Controllers\TaiKhoanController::class, 'saveUpdate']);
 $router->get('taikhoan/remove/{id}', [App\Models\TaiKhoan::class, 'delete']);
 
-// Student
+
+// ----------------Student----------------
 $router->get('list-student', [App\Controllers\StudentController::class, 'index']);
 
 // add student
@@ -38,7 +39,8 @@ $router->post('student/create', [App\Controllers\StudentController::class, 'crea
 // update student
 $router->get('student/detail/{id}', [App\Controllers\StudentController::class, 'detail']);
 $router->post('student/edit-student/{id}', [App\Controllers\StudentController::class, 'editStudent']);
-
+// delete
+$router->get('student/delete/{id}', [App\Controllers\StudentController::class, 'delete']);
 
 
 // bắt đầu định nghĩa ra các đường dẫn
